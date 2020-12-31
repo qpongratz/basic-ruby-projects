@@ -1,8 +1,26 @@
 def caesar_cipher(string, shift)
   characters = string.chars 
-  p characters
   codes = characters.map {|character| character.ord}
-  p codes
+  new_codes = codes.map do |code|
+    if code.between?(65, 90)
+      code += shift
+      unless code.between?(65, 90)
+        code = ((((code - 65)) % 26) + 65) 
+      end
+      code 
+    elsif code.between?(97, 122)
+      code += shift
+      unless code.between?(97, 122)
+        code = ((((code - 97)) % 26) + 97)
+      end
+      code  
+    else
+      code
+    end
+  end
+  new_codes
+  new_characters = new_codes.map {|code| code.chr}
+  new_characters.join('')
 end
 
-caesar_cipher("Hello", 5)
+puts caesar_cipher("L grq'w nqrz. Krz derxw brx sxw vrphwklqj lq wkhuh iru ph, Txhqwlq.", -3)
