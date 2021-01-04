@@ -1,6 +1,6 @@
-def bubble_sort (array)
+def bubble_sort(array)
   iterations = array.length - 1
-  while iterations > 0 do
+  while iterations.positive?
     position = 0
     iterations.times do
       if array[position] > array[position + 1]
