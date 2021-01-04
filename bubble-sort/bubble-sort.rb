@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def bubble_sort(array)
   iterations = array.length - 1
   while iterations.positive?
