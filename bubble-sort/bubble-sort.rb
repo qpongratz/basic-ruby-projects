@@ -12,9 +12,9 @@ def bubble_sort (array)
     end
     iterations -= 1
   end
-  return array
+  array
 end
 
-p bubble_sort([4,3,78,2,0,2])
+p bubble_sort([4, 3, 78, 2, 0, 2])
 p bubble_sort([13, 6, 7, 21, 45, 9, 2, 100])
 p bubble_sort([99, 98, 97, 90, 70, 60, 20, 13, 3, 10])
