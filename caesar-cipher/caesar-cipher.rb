@@ -22,5 +22,3 @@ def caesar_cipher(string, shift)
   new_characters = new_codes.map {|code| code.chr}
   new_characters.join('')
 end
-
-puts caesar_cipher("L grq'w nqrz. Krz derxw brx sxw vrphwklqj lq wkhuh iru ph, Txhqwlq.", -3)
